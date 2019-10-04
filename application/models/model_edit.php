@@ -3,10 +3,11 @@
 
 class Model_Edit extends Model
 {
+
 		/**
 	 * Получение задачи по id.
 	 *
-	 * @param   int     $page  ID задачи
+	 * @param   int  $page  ID задачи
 	 *
 	 * @return array
 	 */
@@ -21,7 +22,6 @@ class Model_Edit extends Model
 		/**
 	 * Изменение данных задачи.
 	 *
-	 * @param   mysqli  $link        Ресурс соединения
 	 * @param   string  $page        ID пользователя
 	 * @param   string  $names_edit  Имя поля в БД
 	 * @param   string  $name_date   Новое данные
@@ -30,7 +30,6 @@ class Model_Edit extends Model
 	 */
 	public function db_edit($page, $names_edit, $name_date)
 	{
-
 		$sql  = "UPDATE tasks SET $names_edit = '$name_date' WHERE id=?";
 		$task = $this->db_fetch_data($sql, [$page]);
 

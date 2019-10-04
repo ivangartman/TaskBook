@@ -23,8 +23,7 @@ if (isset($_POST['first_name']) and empty(trim($_POST['first_name']))) {
     $errors_valid_user->first_name = 'Введите не более 60 символов';
 } else {
     //Проверяем есть ли такой пользователь в БД
-    $link = mysqli_connect('localhost', 'root', '', 'taskBook');
-    mysqli_set_charset($link, "utf8");
+    $link = $this->model->db_link();
     $first_name = mysqli_real_escape_string($link, trim($_POST['first_name']));
     $user = $this->model->db_user($first_name);
     if ($user) {

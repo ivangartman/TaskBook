@@ -1,8 +1,5 @@
 <?php
 
-require_once 'application/models/functions.php';
-
-
 $backward = isset($_SESSION['backward']) ? $_SESSION['backward'] : '';
 $pages_count = '';
 $cur_page = '';

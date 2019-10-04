@@ -22,10 +22,10 @@ class Model_Main extends Model
 	/**
 	 * Получение списка задач + пагинация.
 	 *
-	 * @param   int     $offset      Смещение выборки
-	 * @param   int     $page_items  Количество выводимых записей
-	 * @param   int     $key         Поле по которому производится сортировка
-	 * @param   int     $sort        Метод сортировки
+	 * @param   int  $offset      Смещение выборки
+	 * @param   int  $page_items  Количество выводимых записей
+	 * @param   int  $key         Поле по которому производится сортировка
+	 * @param   int  $sort        Метод сортировки
 	 *
 	 * @return array
 	 */
@@ -41,7 +41,7 @@ class Model_Main extends Model
 		/**
 	 * Получение задачи по id.
 	 *
-	 * @param   int     $page  ID задачи
+	 * @param   int  $page  ID задачи
 	 *
 	 * @return array
 	 */
@@ -56,7 +56,7 @@ class Model_Main extends Model
 		/**
 	 * Удаление задачи по id.
 	 *
-	 * @param   int     $page  ID задачи
+	 * @param   int  $page  ID задачи
 	 *
 	 * @return array
 	 */

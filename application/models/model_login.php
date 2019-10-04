@@ -3,6 +3,7 @@
 
 class Model_Login extends Model
 {
+
 	 /**
 	 * Получение переченя пользователей.
 	 *
@@ -12,9 +13,7 @@ class Model_Login extends Model
 	 */
 	public function db_user($first_name)
 	{
-		//Подключение БД
-		$link = mysqli_connect('localhost', 'root', '', 'taskBook');
-		mysqli_set_charset($link, "utf8");
+		$link = $this->db_link();
 		//Получение записей с таблиц в MySQL.
 		$sql  = "SELECT * FROM users WHERE first_name = '$first_name'";
 		$res  = mysqli_query($link, $sql);
